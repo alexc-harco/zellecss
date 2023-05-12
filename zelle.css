@@ -1,0 +1,711 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Send and receive money with Zelle®</title>
+    <style>
+        /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css with fixes to work with the pre-existing CSS of other sites */
+        .lp_content_wrapper p,
+        .lp_content_wrapper ol,
+        .lp_content_wrapper ul,
+        .lp_content_wrapper li,
+        .lp_content_wrapper dl,
+        .lp_content_wrapper dt,
+        .lp_content_wrapper dd,
+        .lp_content_wrapper blockquote,
+        .lp_content_wrapper vfigure,
+        .lp_content_wrapper fieldset,
+        .lp_content_wrapper legend,
+        .lp_content_wrapper textarea,
+        .lp_content_wrapper pre,
+        .lp_content_wrapper iframe,
+        .lp_content_wrapper hr,
+        .lp_content_wrapper h1,
+        .lp_content_wrapper h2,
+        .lp_content_wrapper h3,
+        .lp_content_wrapper h4,
+        .lp_content_wrapper h5,
+        .lp_content_wrapper h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .lp_content_wrapper h1,
+        .lp_content_wrapper h2,
+        .lp_content_wrapper h3,
+        .lp_content_wrapper h4,
+        .lp_content_wrapper h5,
+        .lp_content_wrapper h6 {
+            font-size: 100%;
+            font-weight: normal;
+        }
+
+        .lp_content_wrapper button,
+        .lp_content_wrapper input,
+        .lp_content_wrapper select,
+        .lp_content_wrapper textarea {
+            margin: 0;
+        }
+
+        .lp_page_wrapper {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+        main.lp_content_wrapper {
+            max-width: 1280px;
+            font-size: 16px;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            line-height: 1.2;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lp_content_wrapper section {
+            padding: 0 40px;
+        }
+
+        .lp_content_wrapper section.heading {
+            padding: 0 0 50px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        /*----new css for noscript accordions----*/
+        @charset "UTF-8";
+
+        .lp_content_wrapper input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .lp_content_wrapper .row {
+            display: flex;
+        }
+
+        .lp_content_wrapper .row .col {
+            flex: 1;
+        }
+
+        /* Accordion styles */
+        .lp_content_wrapper .tabs {
+            overflow: hidden;
+        }
+
+        .lp_content_wrapper .tab {
+            width: 100%;
+            color: #262626;
+            overflow: hidden;
+        }
+
+        .lp_content_wrapper .tab-label {
+            background: #ffffff;
+            cursor: pointer;
+            display: flex;
+            font-weight: 700;
+            justify-content: space-between;
+            padding: 1em;
+            /* Icon */
+        }
+
+        .lp_content_wrapper .tab-label::after {
+            content: "^";
+            transform: rotate(180deg);
+            width: 1em;
+            height: 1em;
+            font-size: 2.5em;
+            font-weight: 100;
+            line-height: 1;
+            margin: 30px 0;
+            text-align: center;
+            transition: all 0.35s;
+        }
+
+        .lp_content_wrapper .tab-label h3 {
+            font-size: 21px;
+            line-height: 1.6;
+            margin: 30px 0;
+            max-width: 80%;
+            text-align: left;
+        }
+
+        .lp_content_wrapper .tab-content {
+            color: #646464;
+            background: white;
+            border-bottom: solid 2px #029a9e;
+            max-height: 0;
+            padding: 0;
+            text-align: left;
+            transition: all 0.35s;
+            font-size: 18px;
+            line-height: 38px;
+        }
+
+        .lp_content_wrapper .tab-content p {
+            font-size: 18px;
+            line-height: 2.1;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            color: #646464;
+        }
+
+        .lp_content_wrapper .tab-content ul li,
+        .lp_content_wrapper .tab-content ol li {
+            font-size: 18px;
+            line-height: 2;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            max-width: 85%;
+            color: #646464;
+        }
+
+        .lp_content_wrapper .tab-close {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1em;
+            font-size: 0.75em;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        .lp_content_wrapper input:checked+.tab-label {
+            background: #ffffff;
+        }
+
+        .lp_content_wrapper input:not(:checked)+.tab-label::after {
+            transform: rotate(0deg);
+        }
+
+        .lp_content_wrapper input:checked+.tab-label::after {
+            content: '^';
+            transform: rotate(180deg);
+            color: #029a9e;
+        }
+
+        .lp_content_wrapper input:checked~.tab-content {
+            max-height: 100vh;
+            padding: 0em 1em 1em;
+        }
+
+        /*----end new css for noscript accordions----*/
+
+
+        .lp_content_wrapper img,
+        .lp_content_wrapper video {
+            height: auto;
+            max-width: 100%;
+        }
+
+        /*! Primary Text Color (Black Text) */
+        .lp_content_wrapper p,
+        .lp_content_wrapper ol,
+        .lp_content_wrapper ul,
+        .lp_content_wrapper h3 {
+            color: #262626;
+        }
+
+        /*! Secondary Text Color (Blue Text/icons) */
+        .lp_content_wrapper h1,
+        .lp_content_wrapper h2,
+        .lp_content_wrapper .app h3 {
+            color: #029a9e;
+        }
+
+        .lp_content_wrapper .faqs-heading {
+            border-bottom-color: #029a9e;
+        }
+
+        .lp_content_wrapper .faqs-heading svg path {
+            fill: #029a9e;
+        }
+
+        /*! Background Grey */
+        .lp_content_wrapper .background-grey {
+            background-color: #e9e9e9;
+        }
+
+        .lp_content_wrapper h1,
+        .lp_content_wrapper h2,
+        .lp_content_wrapper h3 {
+            font-weight: 700;
+        }
+
+        .lp_content_wrapper h1 {
+            font-size: 4.5em;
+            line-height: 1;
+        }
+
+        .lp_content_wrapper h2 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .lp_content_wrapper h3 {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .lp_content_wrapper p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .lp_content_wrapper sup {
+            font-size: 50%;
+            position: relative;
+            top: -5%;
+        }
+
+        .lp_content_wrapper .foot-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* remove extra padding on accordion content */
+        .lp_content_wrapper .cssAccordion {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .lp_content_wrapper .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .lp_content_wrapper .divider {
+            background-color: #707070;
+            height: 2px;
+            width: 100%;
+            margin: 80px auto;
+        }
+
+        .lp_content_wrapper .heading_backdrop {
+            background-color: #029a9e;
+            height: 40vw;
+            max-height: 600px;
+            position: relative;
+            text-align: center;
+        }
+
+        .lp_content_wrapper .heading_backdrop_overlay {
+            height: 40vw;
+            left: 50%;
+            max-height: 600px;
+            overflow: hidden;
+            position: absolute;
+            top: 57%;
+            transform: translate(-50%, -50%);
+            width: 93.75%;
+            /* 1200px in this case*/
+        }
+
+        .lp_content_wrapper .heading_bottom h1 {
+            color: #029a9e;
+            font-size: 64px;
+            line-height: 1.2;
+            margin: 60px 0;
+            /* padding: 30px 50px; */
+        }
+
+        .lp_content_wrapper .heading_login,
+        .lp_content_wrapper .footer_login {
+            background-color: #029a9e;
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 80px auto 100px;
+            padding: 30px 60px;
+            width: fit-content;
+        }
+
+        .lp_content_wrapper .heading_login a:active,
+        .lp_content_wrapper .heading_login a:hover,
+        .lp_content_wrapper .heading_login a:link,
+        .lp_content_wrapper .heading_login a:visited,
+        .lp_content_wrapper .footer_login a:active,
+        .lp_content_wrapper .footer_login a:hover,
+        .lp_content_wrapper .footer_login a:link,
+        .lp_content_wrapper .footer_login a:visited {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .lp_content_wrapper .footer_login {
+            margin: 100px auto;
+        }
+
+        .lp_content_wrapper .heading_content p {
+            font-size: 23px;
+            line-height: 2;
+            margin: 0;
+            text-align: left;
+            letter-spacing: 1.5px;
+        }
+
+        .lp_content_wrapper .steps_headline {
+            margin-bottom: 60px;
+        }
+
+        .lp_content_wrapper .instruction {
+            align-items: center;
+            display: flex;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .lp_content_wrapper .instruction_num {
+            background-color: #029a9e;
+            display: block;
+            height: 60px;
+            margin-right: 48px;
+            min-width: 60px;
+            position: relative;
+            text-align: center;
+            width: 60px;
+        }
+
+        .lp_content_wrapper .instruction_num h3 {
+            position: absolute;
+            color: #ffffff;
+            top: 50%;
+            left: 50%;
+            font-size: 45px;
+            transform: translate(-50%, -50%)
+        }
+
+        .lp_content_wrapper .instruction_close {
+            margin: 60px;
+        }
+
+        .lp_content_wrapper .tips h2 {
+            margin-bottom: 40px;
+        }
+
+        .lp_content_wrapper .tips .row {
+            justify-content: space-between;
+        }
+
+        .lp_content_wrapper .tips .col {
+            align-items: stretch;
+            flex-direction: column;
+            height: auto;
+            margin: 16px;
+            padding: 16px;
+            width: 25%;
+            text-align: center;
+        }
+
+        .lp_content_wrapper .tips .col h2 {
+            margin-bottom: 0;
+        }
+
+        .lp_content_wrapper .tips img {
+            margin-bottom: 20px;
+        }
+
+        .lp_content_wrapper .tips h3 {
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .lp_content_wrapper .tips h4 {
+            color: #262626;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .lp_content_wrapper .video h2 {
+            text-align: center;
+            padding-bottom: 1em;
+        }
+
+        .lp_content_wrapper .video .container {
+            padding-bottom: 60px;
+        }
+
+        .lp_content_wrapper .video_backdrop {
+            background-color: #029a9e;
+            height: 43vw;
+            max-height: 560px;
+            position: relative;
+            text-align: center;
+        }
+
+        .lp_content_wrapper .video_backdrop_overlay {
+            height: 43vw;
+            left: 50%;
+            max-height: 600px;
+            overflow: visible;
+            position: absolute;
+            top: calc(50% + 40px);
+            transform: translate(-50%, -50%);
+            width: calc(100% - 80px);
+            /* 1200px in this case*/
+        }
+
+        .lp_content_wrapper .video_backdrop_overlay img {
+            border: #029a9e 3px solid;
+        }
+
+        @media (min-width: 1280px) {
+            .lp_content_wrapper .video_backdrop_overlay {
+                top: calc(50% + 60px);
+            }
+        }
+
+        .lp_content_wrapper .faqs {
+            margin: 5em 0;
+        }
+
+        .lp_content_wrapper .faqs .faqs-heading {
+            width: 100%;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            margin-bottom: 2.625em;
+        }
+
+        .lp_content_wrapper .faqs .faqs-heading .svg {
+            margin-right: 30px;
+        }
+
+        .lp_content_wrapper .faqs .intro-image {
+            flex: 0 0 70%;
+            margin-bottom: 2em;
+        }
+
+        .lp_content_wrapper .faqs .intro-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .lp_content_wrapper .faqs .intro-text {
+            flex: 0 0 30%;
+        }
+
+        .lp_content_wrapper .faqs .accordian-heading {
+            margin-top: 2em;
+            padding-bottom: 1.5em;
+        }
+
+        .lp_content_wrapper .app {
+            text-align: center;
+        }
+
+        .lp_content_wrapper .app h2 {
+            font-weight: 800;
+            margin-bottom: 1em;
+        }
+
+        .lp_content_wrapper .app h3 {
+            font-size: 2em;
+            margin-bottom: 1.25em;
+        }
+
+        .lp_content_wrapper .app .row {
+            justify-content: center;
+        }
+
+        .lp_content_wrapper .app .app-logo {
+            margin: 0 10px;
+            max-width: 215px;
+        }
+
+        .lp_content_wrapper .logos {
+            padding: 0;
+        }
+
+        .lp_content_wrapper .logos .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .lp_content_wrapper .logos .logo {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .lp_content_wrapper .logos .zelle-logo {
+            border-left: solid 2px #bfbfbf;
+        }
+
+        .lp_content_wrapper .disclaimer {
+            padding-bottom: 10rem;
+        }
+
+        .lp_content_wrapper .disclaimer p {
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .lp_content_wrapper .disclaimer .footnotes {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .lp_content_wrapper .disclaimer .footnotes p {
+            position: relative;
+            padding-left: 8px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .lp_content_wrapper .disclaimer .footnotes p sup {
+            left: 0;
+            top: 0px;
+        }
+
+        .lp_content_wrapper .disclaimer .disclaimer-logos img+img {
+            margin-left: 10px;
+        }
+
+        /* show/hide legal logos based on User Profile dropdown */
+        /* style logos and default to hide all insurance and EQL */
+        .lp_content_wrapper .disclaimer-logos img {
+            margin-right: 15px;
+            display: none;
+            width: auto;
+            height: 50px;
+        }
+
+        /* Profile returns "FDIC" for insurance makes logo visible */
+        .lp_content_wrapper .disclaimer-logos .FDIC img.fdic-block {
+            display: inline-block;
+        }
+
+        /* Profile returns "NCUA" for insurance makeslogo visible */
+        .lp_content_wrapper .disclaimer-logos .NCUA img.ncua-block {
+            display: inline-block;
+        }
+
+        /* Profile returns "Yes" for EQL makes logo visible if EQL returns NO css will keep it hidden */
+        .lp_content_wrapper .disclaimer-logos .EQLYes img.eql-block {
+            display: inline-block;
+        }
+
+        /* USED TO HIDE QT elements for Impact Marketing HTML code generation */
+        .lp_content_wrapper .showF92 {}
+
+        /* OPTIONAL - REMOVE UNUSED QT code with class="hide" before publishing landing page */
+        .lp_content_wrapper .hideF92 {
+            display: none !important;
+        }
+        
+        /* FI type */
+        .lp_content_wrapper .FItypeFDIC::before {
+            content: "customer";
+        }
+        
+        .lp_content_wrapper .FItypeNCUA::before {
+            content: "member";
+        }
+
+        /* show/hide elements based on Yes/No dropdown */
+        .lp_content_wrapper .Yes {}
+
+        .lp_content_wrapper .No {
+            display: none !important;
+        }
+
+        /*# sourceMappingURL=style.css.map */
+
+        /* MEDIA QUERIES */
+        @media (max-width: 959px) {
+            .lp_content_wrapper .container {
+                padding: 0 30px;
+            }
+
+            .lp_content_wrapper .row {
+                display: block;
+            }
+
+            .lp_content_wrapper .app .row {
+                display: flex;
+            }
+            
+            .lp_content_wrapper section.heading {
+                padding: 0 0 70px;
+            }
+
+            .lp_content_wrapper .video_backdrop {
+                height: 40vw;
+            }
+
+            .lp_content_wrapper .video_backdrop_overlay {
+                height: 43vw;
+                top: calc(50% + 50px);
+                width: calc(100% - 60px);
+                /* 1200px in this case*/
+            }
+
+            .lp_content_wrapper .heading_login {
+                margin: 80px auto;
+            }
+
+            .lp_content_wrapper .tips .col {
+                margin: 0 auto 20px;
+                width: 85%;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .lp_content_wrapper .app .row {
+                display: block;
+                text-align: center;
+            }
+
+            .lp_content_wrapper .app .app-logo {
+                margin: 0 auto 10px;
+                max-width: 215px;
+            }
+            
+            .lp_content_wrapper section.heading {
+                padding: 0 0 50px;
+            }
+
+            .lp_content_wrapper .video_backdrop {
+                height: 38vw;
+            }
+
+            .lp_content_wrapper .video_backdrop_overlay {
+                height: 43vw;
+                top: calc(50% + 30px);
+                width: calc(100% - 30px);
+                /* 1200px in this case*/
+            }
+
+            .lp_content_wrapper .heading_bottom h1 {
+                margin: 30px 0;
+                font-size: 48px;
+            }
+
+            .lp_content_wrapper .logos .container .logo {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+    </style>
+</head>
